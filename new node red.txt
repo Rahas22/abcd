@@ -1,0 +1,76 @@
+[
+    {
+        "id": "a0a1b394f1f24470",
+        "type": "tab",
+        "label": "firstFlow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a5613bf9594939c1",
+        "type": "ui_template",
+        "z": "a0a1b394f1f24470",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 220,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "39916337ed0b0cec",
+        "type": "inject",
+        "z": "a0a1b394f1f24470",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 80,
+        "wires": [
+            [
+                "a5613bf9594939c1",
+                "c646b963d58062f4"
+            ]
+        ]
+    },
+    {
+        "id": "c646b963d58062f4",
+        "type": "debug",
+        "z": "a0a1b394f1f24470",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 420,
+        "y": 140,
+        "wires": []
+    }
+]
